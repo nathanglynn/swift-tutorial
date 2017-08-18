@@ -13,24 +13,26 @@ class ViewController: UIViewController {
     // connects the label added to the view to a variable
     @IBOutlet weak var theLabel: UILabel!
 
-    var tapCount = 0
     
-    // makes the first button set a new value for the label variable
-    @IBAction func buttonTap(_ sender: Any) {
-        theLabel.text = "Primary Alt Label";
-        tapCount = tapCount + 1
-        if tapCount >= 15 {theLabel.text = "Primary Alt label overide"}
+    @IBAction func buttonTap(_ sender: AnyObject) {
+        print(text1.text!)
+        print(text2.text!)
+    theLabel.text = "Sum = \(Double(text1.text!)! + Double(text2.text!)!)"
     }
 
-    // makes the second button set a new, different value for the label variable
-    @IBAction func secondButtonTap(_ sender: Any) {
-    theLabel.text = "Secondary Alt Label"
-    }
+    @IBOutlet weak var text1: UITextField!
+    
+    @IBOutlet weak var text2: UITextField!
+    
+    
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
