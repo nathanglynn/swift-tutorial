@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     @IBAction func buttonTap(_ sender: Any) {
         theLabel.text = "Primary Alt Label";
         tapCount = tapCount + 1
-        if tapCount >= 10 {theLabel.text = "Primary Alt label overide"}
+        if tapCount >= 15 {theLabel.text = "Primary Alt label overide"}
     }
 
     // makes the second button set a new, different value for the label variable
